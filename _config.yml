@@ -1,0 +1,8 @@
+# Site settings
+title: "North End Tiny Home Living"
+description: > 
+  Small, updated apartment with private roof deck and fantastic views in Boston's North End
+baseurl: "" # the subpath of your site, e.g. /blog/
+
+# Build settings
+markdown: kramdown

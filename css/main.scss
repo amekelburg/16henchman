@@ -1,0 +1,70 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: Quicksand, Arial, sans-serif;
+
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+
+
+$w-red: #ff6d6c;
+$w-coral: #ffb082;
+$w-green: #86c8b6;
+$w-blue: #37b4d4;
+$w-dark-blue: #197084;
+
+
+$text-color:       white;
+$background-color: $w-red;
+$brand-color:      $w-blue;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-med:  #ababab;
+
+
+// Width of the content area
+$content-width:    900px;
+
+$on-palm:          842px;
+$on-laptop:        850px;
+
+$header-desktop-height: 140px;
+$header-mobile-height: 95px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700|Rock+Salt);
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "fonts",
+        "layout",
+        "syntax-highlighting"
+;

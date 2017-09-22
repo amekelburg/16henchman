@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    
+    <div class="all-content-wrapper">
+      
+    </div>
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="quick-info">
+        <div class="post">
+          <a href="/img/schedule.jpg">Downloadable Wedding Schedule (save it to your phone!)</a>
+          <br/><br/>
+          <a href="https://wedpics.com/">Share photos with wedpics!</a> Enter code RACHELALEX79
+        </div>
+      </div>
+
+      
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script>
+      $("#home-slideshow").vegas({
+          delay: 2500,
+          slides: [
+              { src: "/img/slide1.JPG" },
+              { src: "/img/slide2.JPG" },
+              { src: "/img/slide3.JPG" },
+              { src: "/img/slide4.JPG" },
+              { src: "/img/slide14.JPG" },
+            
+              { src: "/img/slide6.JPG" },
+              { src: "/img/slide5.JPG" },
+              { src: "/img/slide7.JPG" },
+              { src: "/img/slide8.JPG" },
+              { src: "/img/slide11.JPG" },
+              { src: "/img/slide10.JPG" },
+              { src: "/img/slide12.JPG" },
+              { src: "/img/slide13.JPG" },
+              { src: "/img/slide15.JPG" },
+              { src: "/img/slide16.JPG" },
+          ]
+      });
+
+        $("#celeb-slideshow").vegas({
+            delay: 2500,
+            align: "top", 
+            slides: [
+                { src: "/img/celeb1.JPG" },
+                { src: "/img/celeb2.JPG" },
+                { src: "/img/celeb3.JPG" },
+                { src: "/img/celeb4.JPG" },
+                { src: "/img/celeb5.JPG" },
+                { src: "/img/celeb6.JPG" },
+                { src: "/img/celeb7.JPG" },
+                { src: "/img/celeb8.JPG" },
+            ]
+        });
+        
+        $("#lions-slideshow").vegas({
+            delay: 2500,
+            align: "top", 
+            slides: [
+                { src: "/img/lions-club-1.JPG" },
+                { src: "/img/lions-club-2.JPG" },
+                { src: "/img/lions-club-3.JPG" },
+            ]
+        });
+        
+      </script>
+  </body>
+
+
+
+</html>
