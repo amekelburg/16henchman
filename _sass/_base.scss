@@ -8,6 +8,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 
 /**
@@ -81,107 +84,67 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
+    line-height: $base-font-size * 2;
+    border-bottom: 1px solid $text-color;
+    padding: .5*$base-font-size $spacing-unit / 2 ;
+    margin: .5*$base-font-size $spacing-unit / 2;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "janda";
-  color: $w-coral;
-}
 h1 {
-  color: $w-green;
+  font-size: $base-font-size * 2;
+  line-height: $base-font-size * 3;
 }
+
+h2 {
+  font-size: $base-font-size * 1.5;
+}
+
+
+h3 {
+  font-size: $base-font-size * 1.1;
+}
+
+
+/**
+ * text
+ */
+
+p {
+  padding: 0 $spacing-unit / 2 ;
+  margin: 1em $spacing-unit / 2;
+  width: 90%;
+  max-width: 600px;
+  
+  &.intro {
+    margin: 2em auto;
+    text-align: center;
+    font-size: $base-font-size * 1.1;
+    letter-spacing: 1.5px;
+    line-height: 2em;
+    font-weight: 300;
+    @media (max-width: 600px) { 
+      text-align: left;
+    }
+  }
+}
+
 
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
     text-decoration: none;
 
     &:visited {
-        color: lighten($brand-color, 15%);
-        color: $brand-color;
     }
 
     &:hover {
-        color: $text-color;
         
         text-decoration: underline;
     }
 }
 
-
-
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-
-
-/**
- * Wrapper
- */
-.quick-info, .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-.quick-info {
-  margin-bottom:60px;
-}
 
 
 /**
