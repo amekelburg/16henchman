@@ -14,20 +14,25 @@
       <div class="wrapper">
         {{ content }}
         
+        <a name="photos" ></a>
         <h2>Photos</h2>
         <div id="lightgallery">
           {% for i in (2..24) %}
-            <a href="/img/16HenchmanApartment - {{ i }}.jpg">
-              <img src="/img/16HenchmanApartment - {{ i }}.jpg" />
-            </a>
+            {% if i != 14 and i != 19 %}
+              <a href="/img/16HenchmanApartment - {{ i }}.jpg" title="{{ site.captions[i] }}">
+                <img src="/img/16HenchmanApartment - {{ i }}.jpg" />
+              </a>
+              
+            {% endif %}
           {% endfor %}
         </div>
-        
         
       </div>
     </div>
 
     <footer class="site-footer">
+        <br/>
+        <br/>
     </footer>
     
 

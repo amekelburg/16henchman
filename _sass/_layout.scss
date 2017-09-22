@@ -20,6 +20,16 @@ body {
     }
   }
   
+  .thumbs {
+    img {
+      float: left;
+      width: 46%;
+      height: 150px;
+      margin: 2%;
+      object-fit: cover;
+    }
+  }
+  
   ul {
     padding: 0 $spacing-unit / 2;
     margin: 1em $spacing-unit / 2;
@@ -76,6 +86,7 @@ body {
       overflow: hidden;
       padding: 0 $spacing-unit / 2;
       margin: $spacing-unit /2  0;
+      color: black;
       img {
         object-fit: cover;
         width: 100%;

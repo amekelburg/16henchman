@@ -6,3 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Build settings
 markdown: kramdown
+
+
+captions:
+  23: View of Christopher Columbus Park fireworks from the roof deck
