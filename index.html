@@ -3,6 +3,21 @@ layout: default
 permalink: /
 ---
 
+<script type="text/javascript">
+function sendEmail(name, domain) {
+    location.href = ['mailto:' + name, domain + '.com'].join('@');
+}
+
+function writeEmailLink(name, domain) {
+    document.write('<a href="javascript:sendEmail(\''
+      + name + '\', \'' + domain + '\')">');
+    document.write([name, domain].join('@'));
+    document.write('.com');
+    document.write('</a>');
+}
+</script>
+
+
 <h1>16 Henchman St, North End, Boston</h1>
 
 <p class='intro'>
@@ -12,6 +27,11 @@ permalink: /
 <p class='intro'>
   $2,000 per month, includes utilities
 </p>
+
+<p class='intro'>
+  <script type="text/javascript">writeEmailLink('mekelhammer', 'gmail')</script>
+</p>
+
 
 <h2>The Studio</h2>
 <div class='columns'>
